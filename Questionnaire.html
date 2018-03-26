@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Top Nav &amp; Footer</title>
+		<!-- W3  social media icons link -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	</head>
+	<style type="text/css">
+		body {
+
+			margin: 0;
+		}
+		
+		#topnav {
+
+			padding: 18px;
+			background-color: white;
+			box-shadow: 1px 2px 4px rgba(0, 0, 81, .5);
+			display: block;
+		}
+
+		a {
+
+			text-decoration: none;
+			font-size: 18pt;
+			font-family:“Helvetica Neue”, Vardana, sans-serif;
+			color: black;
+		}
+
+		a:hover {
+
+			color: red;
+		}
+
+		#topnav a {
+
+			margin-right: 22px;
+		}
+
+		h1 {
+
+			font-size: 18pt;
+			float: left;
+			font-weight: normal;
+			margin: 0px 50px 0px 0px;
+			font-family:“Helvetica Neue”, Vardana, sans-serif;
+		}
+
+		/* Dropdown button */
+
+		#dropbtn {
+
+			background-color: white;
+			color: black;
+			padding: 16px;
+			font-size: 16px;
+			border: none;
+			cursor: pointer;
+		}
+
+		/* The container <div> - needed to position the dropdown content */
+
+		.mobmenu {
+
+			float: left;
+			position: relative;
+			display: none;
+		}
+
+		/*Dropdown content (Hidden by default)*/
+
+		.dropdown-content {
+
+			display: none;
+			position: absolute;
+			background-color: #f1f1f1;
+			min-width: 160px;
+			box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+			z-index: 1;
+		}
+
+		/*links inside the dropdwon */
+
+		.dropdown-content a {
+
+			color: black;
+			padding: 12px 16px;
+			text-decoration: none;
+			display: block;
+		}
+
+		/*Change color of dropdown link on hover */
+
+		.dropdown-content a:hover { background-color: #ddd }
+
+		/*show the drop down menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+
+		.show {display: block;}
+
+		#socmedia {
+
+			float: right;
+			font-size: 16pt;
+			margin-right: 12px;
+
+		}
+
+		article {
+
+			width: 1036px;
+			margin-right: auto;
+			margin-left: auto;
+		}
+
+		h2, h3, p, i, option {
+
+			font-family: “Helvetica Neue”, Verdana, sans-serif;
+		}
+
+		.questionnaire {
+
+			width: 960px;
+			margin-top: 5px;
+			margin-left: auto;
+			margin-right: auto;
+			background-color: #b5d0fc;
+			padding: 10px;
+
+		}
+
+		h2, h3 {
+
+			text-align: center;
+		}
+
+		.logo {
+
+			width: 660px;
+			height: 260px;
+			border: solid black 1px;
+			margin-left: auto;
+			margin-right: auto;
+		
+		}
+
+		.first {
+
+			float: left;
+			padding: 20px;
+
+		}
+
+		.surname {
+
+			float: left;
+			padding: 20px;
+		}
+
+		.email {
+
+			clear: left;
+			float: left;
+			padding: 20px;
+		}
+
+		.id {
+
+			float: left;
+			padding: 20px;
+		}
+
+		form {
+
+			clear: left;
+			float: left;
+			padding: 20px;
+		}
+
+		.questions {
+
+			clear: left;
+			display: inline-block;
+		}
+
+		#Q1, #Q2, #Q3, #Q4 {
+
+			border-style: inset;
+			width: 700px;
+			margin: 20px;
+			padding: 30px;
+			background-color: white;
+			margin-right: auto;
+			margin-left: auto;
+			clear: left;
+
+		}
+
+		#Q1 > input {
+
+			margin-left: 35px;
+			float: left;
+		}
+		
+		#Q2 > input {
+
+			margin-left: 35px;
+			float: left;
+		}
+
+		#Q3 > input {
+
+			margin-left: 35px;
+			float: left;
+		}
+
+		#Q4 > input {
+
+			margin-left: 35px;
+			float: left;
+		}
+
+		.submit {
+
+			float: left;
+			display: inline-block;
+		}
+		
+		footer {
+
+			background-color: #3f4d63;
+			color: white;
+			font-size: 8pt;
+			font-weight: normal; 
+			font-family: “Helvetica Neue”, Verdana, sans-serif;
+			padding: 8px 8px 8px 20px;
+			margin-top: 20px;
+			
+		}
+
+		footer a {
+
+			color: white;
+			font-size: 8pt;
+			font-weight: italic;
+
+		}
+
+		@media (max-width: 782px) {
+
+			#topnav {
+
+				height: 46px;
+				display: block;
+				padding: 5px;
+			}
+
+			h1 {
+
+				font-size: 12pt;
+				float: none;
+				margin: 14px 0px 0px 12px;
+			}
+
+			#options {
+
+				display: none;
+			}
+
+			#socmedia {
+
+				display: none;
+			}
+
+			.mobmenu {
+
+				display: inline-block;
+
+			}
+
+			.dropdown-content a {
+
+				font-size: 12px
+			}
+		}
+
+	</style>
+	<script type="text/javascript">
+
+		function validate() {
+
+			var nameError = checkName();
+			var surnameError = checkSurname();
+			var emailError = checkEmail();
+			var idError = checkId();
+			var courseError = checkDropdown();
+			var oneError = checkRadio();
+			var twoError = checkradioTwo();
+			var threeError = checkradioThree();
+			var fourError = checkradioFour();
+
+			if (nameError && surnameError && emailError && idError &&courseError && oneError && twoError && threeError && fourError) {document.getElementById("result").innerHTML = '<span style = "color: green">Form submitted</span>';
+			}
+
+			else { document.getElementById("result").innerHTML = '<span style = "color: red">* Invalid please check form &amp; resubmit';
+				return false;
+			}
+
+		}
+		
+		function checkName() {
+
+			if (document.getElementById("firstName").value == "") {
+				document.getElementById("error_first").innerHTML = "* Name needed.";
+				return false;
+			}
+			else {return true;
+			}
+		}
+
+		function checkSurname() {
+
+			if (document.getElementById("secondName").value =="") {
+				document.getElementById("error_surname").innerHTML = "* Surname needed.";
+				return false;
+			}
+				else {return true;
+
+			}
+		}
+
+		function checkEmail() {
+
+			var email = document.getElementById("emailAddress").value;
+			var atSign = email.indexOf('@');
+			var str = document.getElementById("emailAddress").value;
+
+			if (email =="") {
+				document.getElementById("error_email").innerHTML = "* Email Address needed";
+				return false;
+			}
+			else if (atSign == -1){
+				document.getElementById("error_email").innerHTML = "* Email needs an &#64; sign";
+				return false;
+			}
+			else {return true;
+
+			}
+		}
+
+		function checkId() {
+
+			var res = document.getElementById("stNumber").value;
+
+			if (res =="") {
+				document.getElementById("error_stNumber").innerHTML = "* Student ID number needed";
+				return	false;
+			}
+
+			else if (isNaN(res)) {
+				document.getElementById("error_stNumber").innerHTML = "* Must only inlcude numbers";
+				return false;
+			}
+
+			else { return true;
+			}
+		}
+
+		function checkDropdown() {
+
+			var chosen = "";
+			var len = document.drpdown.courseSelect.length;
+			var i; 
+
+			for (i = 0; i < len; i++) {
+				if (document.drpdown.courseSelect[i].selected) {
+					chosen = document.drpdown.courseSelect[i].value;
+				}
+			}
+
+			if (chosen == "None") {
+
+				document.getElementById("error_dropdown").innerHTML = "* No option chosen";
+				return false;
+			}
+
+			else {
+				
+				document.getElementById("error_dropdown").innerHTML = "";
+				return	true;
+			}
+		}
+
+		function checkRadio() {
+
+			var answer = "";
+			var len = document.question.radio.length;
+			var i;
+
+			for (i = 0; i < len; i++) {
+				if (document.question.radio[i].checked) {
+					answer = document.question.radio[i].value;
+					break;
+				}
+			}
+
+			if (answer == "") {
+				document.getElementById("return_radio").innerHTML = '<span style="color: red">* No answer selected</span>';
+				return false;
+			}
+
+			else if (answer == "wrong") {
+				document.getElementById("return_radio").innerHTML = '<span style="color: red"> * Incorrect answer: Try Again</span>';
+				return false;
+			}
+
+			else if (answer == "correct") {
+				document.getElementById("return_radio").innerHTML = '<span style="color: green"> Correct</span>';
+				return true;
+			}
+		}
+
+		function checkradioTwo() {
+
+			var answer = "";
+			var len = document.questionTwo.radioTwo.length;
+			var i;
+
+			for (i = 0; i < len; i++) {
+				if (document.questionTwo.radioTwo[i].checked) {
+					answer = document.questionTwo.radioTwo[i].value;
+					break;
+				}
+			}
+
+			if (answer == "") {
+				document.getElementById("return_radioTwo").innerHTML = '<span style="color: red">* No answer selected</span>';
+				return false;
+			}
+
+			else if (answer == "wrong") {
+				document.getElementById("return_radioTwo").innerHTML = '<span style="color: red">* Incorrect answer: Try Again</span>';
+				return false;
+			}
+
+			else if (answer == "correct") {
+				document.getElementById("return_radioTwo").innerHTML = '<span style="color: green"> Correct</span>';
+				return true;
+			}
+		}
+
+		function checkradioThree() {
+
+			var answer = "";
+			var len = document.questionThree.radioThree.length;
+			var i;
+
+			for (i = 0; i < len; i++) {
+				if (document.questionThree.radioThree[i].checked) {
+					answer = document.questionThree.radioThree[i].value;
+					break;
+				}
+			}
+
+			if (answer == "") {
+				document.getElementById("return_radioThree").innerHTML = '<span style="color: red">* No answer selected</span>';
+				return false;
+			}
+
+			else if (answer == "wrong") {
+				document.getElementById("return_radioThree").innerHTML = '<span style="color: red">* Incorrect answer: Try Again</span>';
+				return false;
+			}
+
+			else if (answer == "correct") {
+				document.getElementById("return_radioThree").innerHTML = '<span style="color: green"> Correct</span>';
+				return true;
+			}
+		}
+
+		function checkradioFour() {
+
+			var answer = "";
+			var len = document.questionFour.radioFour.length;
+			var i;
+
+			for (i = 0; i < len; i++) {
+				if (document.questionFour.radioFour[i].checked) {
+					answer = document.questionFour.radioFour[i].value;
+					break;
+				}
+			}
+
+			if (answer == "") {
+				document.getElementById("return_radioFour").innerHTML = '<span style="color: red">* No answer selected</span>';
+				return false;
+			}
+
+			else if (answer == "wrong") {
+				document.getElementById("return_radioFour").innerHTML = '<span style="color: red">* Incorrect answer: Try Again</span>';
+				return false;
+			}
+
+			else if (answer == "correct") {
+				document.getElementById("return_radioFour").innerHTML = '<span style="color: green"> Correct</span>';
+				return true;
+			}
+		}
+
+  
+	</script>
+<body>
+	<div id="topnav">
+		<div class="mobmenu">
+			<button onclick="mobMenu()" id="dropbtn" class="fa fa-bars"></button>
+			<div id="mobDropdown" class="dropdown-content">
+				<a href="#">Projects</a>
+				<a href="#">Request CV</a>
+				<a href="#">About</a>
+			</div>
+		</div>
+			<h1>Nick Hoggett</h1>
+		<span id="options">
+			<a href="#">Projects</a>
+			<a href="mailto:nick.hoggett@gmail.com?Subject=Please%20send%20your%20CV">Request CV</a>
+			<a href="#">About</a>
+		</span>
+		<div id="socmedia">
+			<a href="https://uk.linkedin.com/in/nick-hoggett-861a929b" class="fa fa-linkedin-square"></a>
+			<a href="https://www.instagram.com/nickhoggett/" class="fa fa-instagram"></a>
+			<a href="https://www.facebook.com/nick.hoggett" class="fa fa-facebook-square"></a>
+			<a href="https://twitter.com/nickhoggett" class="fa fa-twitter-square"></a>
+		</div>	
+	</div>
+	<article>
+		<h2>UWL Student Health &amp; Safety Test</h2>
+		<p>While working for the University of West London in the Employment &amp; Placement Services department. The managers were looking for a way in which they could automatically test the students pn health and safet y in the work environment who were due to take a placements and gain work experience, and ensure they knew everything they needed to know.</p>
+		<p>There turned out to be no easy solution to this requirement as the department could not include any of student details on a third party platform and were looking to setup a test which worked as a questionnaire that could only be submitted back to the department once all questions had been answered correctly.</p>
+		<p>After having researched and exhuasted all options I had suggested to them that I could write them the front end of a form which incorperated Javascript functions that would meet their requirements should they wish host this on their servers.</p>
+		<p>This is that script, it's here to show my understanding of frontend Javascipt development and is the first form I've written for a client which relies on Javascript.</p> 
+		<i>Please note this has been posted here with the universities copyrighted content removed and is here to show simply how it functioned as a solution to what they needed.</i>
+		<div class="questionnaire" style="border-style: inset">
+			<h3>UWL Student Health &amp; Safety Test</h3>
+			<div class="logo">
+				<img src="#" alt="UWL Employment &amp; Placement Services Logo">
+			</div>
+			<div class="info">	
+				<div class="first">
+					<p>First Name</p>
+					<!--No requirements or limits-->
+					<input type="text" style="width:300px" id="firstName">
+					<span id="error_first" style="color: red"></span>
+				</div>
+				<div class="surname">
+					<p>Surname</p>
+					<!--No requirements or limits-->			
+					<input type="text" style="width:300px" id="secondName">
+					<span id="error_surname" style="color: red"></span>
+				</div>
+				<div class="email">
+					<p>University Email</p>
+					<!--Required: @ within text string-->
+					<input type="text" name="email" style="width:300px" id="emailAddress">
+					<span id="error_email" style="color: red"></span>
+				</div>
+				<div class="id">
+					<p>Student ID</p>
+					<!--Required: only numbers-->
+					<input type="text" name="ID" style="width:300px" id="stNumber">
+					<span id="error_stNumber" style="color: red"></span>
+				</div>
+				<form name="drpdown">
+					<p>Course:</p>
+					<!--Requierd: text value-->
+					<select name="courseSelect">
+						<option value="None">Select Your Course</option>
+						<option value="Course1">Course 1</option>
+						<option value="Course2">Course 2</option>
+						<option value="Cousre3">Course 3</option>
+						<option value="Cousre4">Course 4</option>
+						<option value="Cousre5">Course 5</option>
+					</select>
+					<span id="error_dropdown" style="color: red"></span>
+				</form>			
+			</div>
+			<div class="questions">
+				<p>Instructions: Please read your health and safety guide to the work environment attached to your email. Please select a one answer for each of the following questions regarding the Health &amp; Safety guide then select submit once completed</p>
+				<p>Please note: This form need to be submitted by the 00/00/00. You will need to have answered every question correctly in order to submit this form. Once it has been submitted no changes can be made. Should you need any further assistance please call: 000000000 or mail ------ ------@uwl.ac.uk</p>
+					<form name="question" id="Q1">
+						<h3>Question 1</h3>
+						<p>Insert the Question Here!</p>
+						<input type="radio" name="radio" value="correct">
+							<p>Correct Answer</p>
+						<input type="radio" name="radio" value="wrong">
+							<p>Wrong Answer</p>
+						<input type="radio" name="radio" value="wrong">
+							<p>Wrong Answer</p>
+						<input type="radio" name="radio" value="wrong">
+							<p>Wrong Answer</p>
+						<span id="return_radio"></span>
+					</form>
+					<form name="questionTwo" id="Q2">
+						<h3>Question 2</h3>
+						<p>Insert the Question Here!</p>
+						<input type="radio" name="radioTwo" value="wrong">
+							<p>Wrong Answer</p>
+						<input type="radio" name="radioTwo" value="wrong">
+							<p>Wrong Answer</p>
+						<input type="radio" name="radioTwo" value="correct">
+							<p>Correct Answer</p>
+						<input type="radio" name="radioTwo" value="wrong">
+							<p>Wrong Answer</p>
+						<span id="return_radioTwo"></span>
+					</form>
+					<form name="questionThree" id="Q3">
+						<h3>Question 3</h3>
+						<p>Insert the Question Here!</p>
+						<input type="radio" name="radioThree" value="wrong">
+							<p>Wrong Answer</p>
+						<input type="radio" name="radioThree" value="correct">
+							<p>Correct Answer</p>
+						<input type="radio" name="radioThree" value="wrong">
+							<p>Wrong Answer</p>
+						<input type="radio" name="radioThree" value="wrong">
+							<p>Wrong Answer</p>
+						<span id="return_radioThree"></span>
+					</form>
+					<form name="questionFour" id="Q4">
+						<h3>Question 4</h3>
+						<p>Insert the Question Here!</p>
+						<input type="radio" name="radioFour" value="wrong">
+							<p>Wrong Answer</p>
+						<input type="radio" name="radioFour" value="correct">
+							<p>Correct Answer</p>
+						<input type="radio" name="radioFour" value="wrong">
+							<p>Wrong Answer</p>
+						<input type="radio" name="radioFour" value="wrong">
+							<p>Wrong Answer</p>
+						<span id="return_radioFour"></span>
+					</form>
+				<div class="submit">
+					<p>Please check your answers then submit.</p>
+					<p>Thank you</p>
+					<button type="button" onclick="validate()">SUBMIT</button>
+					<span id="result"></span>
+				</div>
+			</div>
+		</div>
+	</article>
+	<script type="text/javascript">
+		//alert(document.body.clientWidth);
+
+		/*when user clicks on the button, toggle between hidding and showing the dropdown content */
+
+		function mobMenu() {
+			document.getElementById("mobDropdown").classList.toggle("show");
+		}
+
+		//Close the dropdown if the user clicks outisde of it. 
+		window.onclick = function(event) {
+			if (!event.target.matches(".dropbtn")) {
+
+				var dropdowns = document.getElementByClassName("dropdown-content");
+				var i;
+				for (i = 0; i < dropdowns.length; i++) {
+					var openDropdown = dropdowns[i];
+					if (openDropdown.classList.contains("show"));{
+						openDropdown.classList.remove("show");
+					}
+				}
+			}
+		}
+	</script>
+	<footer>
+		<p>Contact Details: </p>
+		<p>Email me: <a href="mailto:nick.hoggett@gmail.com?Subject=Hello%20Nick">nick.hoggett@gmail.com</a></p>
+		<p>Social Media:</p>
+		<div id="socmediafooter">
+			<a href="https://uk.linkedin.com/in/nick-hoggett-861a929b" class="fa fa-linkedin-square"></a>
+			<a href="https://www.instagram.com/nickhoggett/" class="fa fa-instagram"></a>
+			<a href="https://www.facebook.com/nick.hoggett" class="fa fa-facebook-square"></a>
+			<a href="https://twitter.com/nickhoggett" class="fa fa-twitter-square"></a>
+		</div>
+	</footer>
+</body>
+</html>
