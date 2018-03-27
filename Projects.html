@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Nick Hoggett 2018</title>
+	<!-- W3  social media icons link -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style type="text/css">
+
+		body {
+
+			margin: 0;
+		}
+		
+		#topnav {
+
+			padding: 18px;
+			background-color: white;
+			box-shadow: 1px 2px 4px rgba(0, 0, 81, .5);
+			display: block;
+		}
+
+		a {
+
+			text-decoration: none;
+			font-size: 18pt;
+			font-family:“Helvetica Neue”, Vardana, sans-serif;
+			color: black;
+		}
+
+		a:hover {
+
+			color: red;
+		}
+
+		#topnav a {
+
+			margin-right: 22px;
+		}
+
+		h1 {
+
+			font-size: 18pt;
+			float: left;
+			font-weight: normal;
+			margin: 0px 50px 0px 0px;
+			font-family:“Helvetica Neue”, Vardana, sans-serif;
+		}
+
+		/* Dropdown button */
+
+		#dropbtn {
+
+			background-color: white;
+			color: black;
+			padding: 16px;
+			font-size: 16px;
+			border: none;
+			cursor: pointer;
+		}
+
+		/* The container <div> - needed to position the dropdown content */
+
+		.mobmenu {
+
+			float: left;
+			position: relative;
+			display: none;
+		}
+
+		/*Dropdown content (Hidden by default)*/
+
+		.dropdown-content {
+
+			display: none;
+			position: absolute;
+			background-color: #f1f1f1;
+			min-width: 160px;
+			box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+			z-index: 1;
+		}
+
+		/*links inside the dropdwon */
+
+		.dropdown-content a {
+
+			color: black;
+			padding: 12px 16px;
+			text-decoration: none;
+			display: block;
+		}
+
+		/*Change color of dropdown link on hover */
+
+		.dropdown-content a:hover { background-color: #ddd }
+
+		/*show the drop down menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+
+		.show {display: block;}
+
+		h2 {
+
+			font-size: 19pt;
+			font-weight: normal; 
+			font-family: “Helvetica Neue”, Verdana, sans-serif;
+			margin-left: 10px;
+
+		}
+
+		#socmedia {
+
+			float: right;
+			font-size: 16pt;
+			margin-right: 12px;
+
+		}
+
+		img { 
+
+			border-radius: 15px;
+			max-width: 100%;
+		}
+
+		.row {
+
+			display: flex;
+			flex-wrap: wrap;
+			padding: 0 4px;
+
+		}
+
+		.column {
+
+			flex: 24%;
+			max-width: 24%;
+			padding: 0 4px;
+
+		}
+
+		.column img {
+
+			margin-top: 8px;
+			vertical-align: middle;
+
+		}
+
+		/*container holding the image and text*/
+
+		.container {
+
+			position: relative;
+			text-align: center;
+			color: white;
+
+		}
+
+		/*top left text position*/
+
+		.top-left {
+
+			position: absolute;
+			top: 8px;
+			left: 16px;
+			padding: 14px 0px 0px 18px;
+			font-family: “Helvetica Neue”, Verdana, sans-serif;
+			font-size: 12pt;
+		}
+
+		footer {
+
+			background-color: #3f4d63;
+			color: white;
+			font-size: 8pt;
+			font-weight: normal; 
+			font-family: “Helvetica Neue”, Verdana, sans-serif;
+			padding: 8px 8px 8px 20px;
+			margin-top: 20px;
+			
+		}
+
+		footer a {
+
+			color: white;
+			font-size: 8pt;
+			font-weight: italic;
+
+		}
+
+		@media (max-width: 1353px) {
+
+			footer {
+
+				position: fixed;
+				width: 100%;
+				bottom: 0;
+			}
+		}
+
+		@media (max-width: 884px) {
+
+			.column {
+
+				flex: 45%;
+				max-width: 45%;
+			}
+
+			.progress {
+
+				display: none;
+
+			}
+
+			footer { 
+
+				position: relative; 
+			}
+		}
+
+		@media (max-width: 782px) {
+
+			#topnav {
+
+				height: 46px;
+				display: block;
+				padding: 5px;
+			}
+
+			h1 {
+
+				font-size: 12pt;
+				float: none;
+				margin: 14px 0px 0px 12px;
+			}
+
+			#options {
+
+				display: none;
+			}
+
+			#socmedia {
+
+				display: none;
+			}
+
+			.mobmenu {
+
+				display: inline-block;
+
+			}
+
+			.dropdown-content a {
+
+				font-size: 12px
+			}
+			
+			h2 {
+
+				font-size: 12pt;
+			}
+
+			footer {
+
+				position: fixed;
+			}
+		}
+
+		@media (max-width: 600px) {
+
+			.column {
+
+				flex: 100%;
+				max-width: 100%
+			}
+
+			.progress, .progress1 {
+
+				display: none;
+			}
+
+			footer {
+
+				position: relative;
+			}
+		}
+
+	</style>
+</head>
+<body>
+	<div id="topnav">
+		<div class="mobmenu">
+			<button onclick="mobMenu()" id="dropbtn" class="fa fa-bars"></button>
+			<div id="mobDropdown" class="dropdown-content">
+				<a href="#">Projects</a>
+				<a href="#">Request CV</a>
+				<a href="#">About</a>
+			</div>
+		</div>
+			<h1>Nick Hoggett</h1>
+		<span id="options">
+			<a href="#">Projects</a>
+			<a href="mailto:nick.hoggett@gmail.com?Subject=Please%20send%20your%20CV">Request CV</a>
+			<a href="#">About</a>
+		</span>
+		<div id="socmedia">
+			<a href="https://uk.linkedin.com/in/nick-hoggett-861a929b" class="fa fa-linkedin-square"></a>
+			<a href="https://www.instagram.com/nickhoggett/" class="fa fa-instagram"></a>
+			<a href="https://www.facebook.com/nick.hoggett" class="fa fa-facebook-square"></a>
+			<a href="https://twitter.com/nickhoggett" class="fa fa-twitter-square"></a>
+		</div>	
+	</div>
+	<article>
+		<h2>Projects</h2>
+		<div class="row">
+			<div class="column">
+				<div class="container">
+					<img src="moon.jpg">
+					<div class="top-left">Craig Hull Photography</div>
+				</div>
+				<div class="container">
+					<img class="progress" src="progress.jpg">
+					<div class="top-left"></div>
+				</div>
+			</div>
+			<div class="column">
+				<div class="container">
+					<img src="moon.jpg">
+					<div class="top-left">UWL Questionnaire</div>
+				</div>
+				<div class="container">
+					<img class="progress" src="progress.jpg">
+					<div class="top-left"></div>
+				</div>
+			</div>
+			<div class="column">
+				<div class="container">
+					<a href="top20.html"><img src="Images/Top20.jpg"></a>
+					<div class="top-left">My Top 20 Albums 2017</div>
+				</div>
+				<div class="container">
+					<img class="progress" src="progress.jpg">
+					<div class="top-left"></div>
+				</div>
+			</div>
+			<div class="column">
+				<div class="container">
+					<img class="progress1" src="progress.jpg">
+					<div class="top-left"></div>
+				</div>
+				<div class="container">
+					<img class="progress" src="progress.jpg">
+					<div class="top-left"></div>
+				</div>
+			</div>
+		</div>
+	<script type="text/javascript">
+		//alert(document.body.clientWidth);
+
+		/*when user clicks on the button, toggle between hidding and showing the dropdown content */
+
+		function mobMenu() {
+			document.getElementById("mobDropdown").classList.toggle("show");
+		}
+
+		//Close the dropdown if the user clicks outisde of it. 
+		window.onclick = function(event) {
+			if (!event.target.matches(".dropbtn")) {
+
+				var dropdowns = document.getElementByClassName("dropdown-content");
+				var i;
+				for (i = 0; i < dropdowns.length; i++) {
+					var openDropdown = dropdowns[i];
+					if (openDropdown.classList.contains("show"));{
+						openDropdown.classList.remove("show");
+					}
+				}
+			}
+		}
+	</script>
+	</article>
+	<footer>
+		<p>Contact Details: </p>
+		<p>Email me: <a href="mailto:nick.hoggett@gmail.com?Subject=Hello%20Nick">nick.hoggett@gmail.com</a></p>
+		<p>Social Media:</p>
+		<div id="socmediafooter">
+			<a href="https://uk.linkedin.com/in/nick-hoggett-861a929b" class="fa fa-linkedin-square"></a>
+			<a href="https://www.instagram.com/nickhoggett/" class="fa fa-instagram"></a>
+			<a href="https://www.facebook.com/nick.hoggett" class="fa fa-facebook-square"></a>
+			<a href="https://twitter.com/nickhoggett" class="fa fa-twitter-square"></a>
+		</div>
+	</footer>
+</body>
+</html>
