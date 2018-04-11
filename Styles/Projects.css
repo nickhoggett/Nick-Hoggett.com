@@ -1,0 +1,275 @@
+body {
+
+			margin: 0;
+		}
+		
+		#topnav {
+
+			padding: 18px;
+			background-color: white;
+			box-shadow: 1px 2px 4px rgba(0, 0, 81, .5);
+			display: block;
+		}
+
+		a {
+
+			text-decoration: none;
+			font-size: 18pt;
+			font-family:“Helvetica Neue”, Vardana, sans-serif;
+			color: black;
+		}
+
+		a:hover {
+
+			color: red;
+		}
+
+		#topnav a {
+
+			margin-right: 22px;
+		}
+
+		h1 {
+
+			font-size: 18pt;
+			float: left;
+			font-weight: normal;
+			margin: 0px 50px 0px 0px;
+			font-family:“Helvetica Neue”, Vardana, sans-serif;
+		}
+
+		/* Dropdown button */
+
+		#dropbtn {
+
+			background-color: white;
+			color: black;
+			padding: 16px;
+			font-size: 16px;
+			border: none;
+			cursor: pointer;
+		}
+
+		/* The container <div> - needed to position the dropdown content */
+
+		.mobmenu {
+
+			float: left;
+			position: relative;
+			display: none;
+		}
+
+		/*Dropdown content (Hidden by default)*/
+
+		.dropdown-content {
+
+			display: none;
+			position: absolute;
+			background-color: #f1f1f1;
+			min-width: 160px;
+			box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+			z-index: 1;
+		}
+
+		/*links inside the dropdwon */
+
+		.dropdown-content a {
+
+			color: black;
+			padding: 12px 16px;
+			text-decoration: none;
+			display: block;
+		}
+
+		/*Change color of dropdown link on hover */
+
+		.dropdown-content a:hover { background-color: #ddd }
+
+		/*show the drop down menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+
+		.show {display: block;}
+
+		h2 {
+
+			font-size: 19pt;
+			font-weight: normal; 
+			font-family: “Helvetica Neue”, Verdana, sans-serif;
+			margin-left: 10px;
+
+		}
+
+		#socmedia {
+
+			float: right;
+			font-size: 16pt;
+			margin-right: 12px;
+
+		}
+
+		img { 
+
+			border-radius: 15px;
+			max-width: 100%;
+		}
+
+		.row {
+
+			display: flex;
+			flex-wrap: wrap;
+			padding: 0 4px;
+
+		}
+
+		.column {
+
+			flex: 24%;
+			max-width: 24%;
+			padding: 0 4px;
+
+		}
+
+		.column img {
+
+			margin-top: 8px;
+			vertical-align: middle;
+
+		}
+
+		/*container holding the image and text*/
+
+		.container {
+
+			position: relative;
+			text-align: center;
+			color: white;
+
+		}
+
+		/*top left text position*/
+
+		.top-left {
+
+			position: absolute;
+			top: 8px;
+			left: 16px;
+			padding: 14px 0px 0px 18px;
+			font-family: “Helvetica Neue”, Verdana, sans-serif;
+			font-size: 12pt;
+		}
+
+		footer {
+
+			background-color: #3f4d63;
+			color: white;
+			font-size: 8pt;
+			font-weight: normal; 
+			font-family: “Helvetica Neue”, Verdana, sans-serif;
+			padding: 8px 8px 8px 20px;
+			margin-top: 20px;
+			
+		}
+
+		footer a {
+
+			color: white;
+			font-size: 8pt;
+			font-weight: italic;
+
+		}
+
+		@media (max-width: 1353px) {
+
+			footer {
+
+				position: fixed;
+				width: 100%;
+				bottom: 0;
+			}
+		}
+
+		@media (max-width: 884px) {
+
+			.column {
+
+				flex: 45%;
+				max-width: 45%;
+			}
+
+			.progress {
+
+				display: none;
+
+			}
+
+			footer { 
+
+				position: relative; 
+			}
+		}
+
+		@media (max-width: 782px) {
+
+			#topnav {
+
+				height: 46px;
+				display: block;
+				padding: 5px;
+			}
+
+			h1 {
+
+				font-size: 12pt;
+				float: none;
+				margin: 14px 0px 0px 12px;
+			}
+
+			#options {
+
+				display: none;
+			}
+
+			#socmedia {
+
+				display: none;
+			}
+
+			.mobmenu {
+
+				display: inline-block;
+
+			}
+
+			.dropdown-content a {
+
+				font-size: 12px
+			}
+			
+			h2 {
+
+				font-size: 12pt;
+			}
+
+			footer {
+
+				position: fixed;
+			}
+		}
+
+		@media (max-width: 600px) {
+
+			.column {
+
+				flex: 100%;
+				max-width: 100%
+			}
+
+			.progress, .progress1 {
+
+				display: none;
+			}
+
+			footer {
+
+				position: relative;
+			}
+		}
