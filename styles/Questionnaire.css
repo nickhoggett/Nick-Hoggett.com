@@ -1,0 +1,276 @@
+body {
+
+			margin: 0;
+		}
+		
+		#topnav {
+
+			padding: 18px;
+			background-color: white;
+			box-shadow: 1px 2px 4px rgba(0, 0, 81, .5);
+			display: block;
+		}
+
+		a {
+
+			text-decoration: none;
+			font-size: 18pt;
+			font-family:“Helvetica Neue”, Vardana, sans-serif;
+			color: black;
+		}
+
+		a:hover {
+
+			color: red;
+		}
+
+		#topnav a {
+
+			margin-right: 22px;
+		}
+
+		h1 {
+
+			font-size: 18pt;
+			float: left;
+			font-weight: normal;
+			margin: 0px 50px 0px 0px;
+			font-family:“Helvetica Neue”, Vardana, sans-serif;
+		}
+
+		/* Dropdown button */
+
+		#dropbtn {
+
+			background-color: white;
+			color: black;
+			padding: 16px;
+			font-size: 16px;
+			border: none;
+			cursor: pointer;
+		}
+
+		/* The container <div> - needed to position the dropdown content */
+
+		.mobmenu {
+
+			float: left;
+			position: relative;
+			display: none;
+		}
+
+		/*Dropdown content (Hidden by default)*/
+
+		.dropdown-content {
+
+			display: none;
+			position: absolute;
+			background-color: #f1f1f1;
+			min-width: 160px;
+			box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+			z-index: 1;
+		}
+
+		/*links inside the dropdwon */
+
+		.dropdown-content a {
+
+			color: black;
+			padding: 12px 16px;
+			text-decoration: none;
+			display: block;
+		}
+
+		/*Change color of dropdown link on hover */
+
+		.dropdown-content a:hover { background-color: #ddd }
+
+		/*show the drop down menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+
+		.show {display: block;}
+
+		#socmedia {
+
+			float: right;
+			font-size: 16pt;
+			margin-right: 12px;
+
+		}
+
+		article {
+
+			width: 1036px;
+			margin-right: auto;
+			margin-left: auto;
+		}
+
+		h2, h3, p, i, option {
+
+			font-family: “Helvetica Neue”, Verdana, sans-serif;
+		}
+
+		.questionnaire {
+
+			width: 960px;
+			margin-top: 5px;
+			margin-left: auto;
+			margin-right: auto;
+			background-color: #b5d0fc;
+			padding: 10px;
+
+		}
+
+		h2, h3 {
+
+			text-align: center;
+		}
+
+		.logo {
+
+			width: 660px;
+			height: 260px;
+			border: solid black 1px;
+			margin-left: auto;
+			margin-right: auto;
+		
+		}
+
+		.first {
+
+			float: left;
+			padding: 20px;
+
+		}
+
+		.surname {
+
+			float: left;
+			padding: 20px;
+		}
+
+		.email {
+
+			clear: left;
+			float: left;
+			padding: 20px;
+		}
+
+		.id {
+
+			float: left;
+			padding: 20px;
+		}
+
+		form {
+
+			clear: left;
+			float: left;
+			padding: 20px;
+		}
+
+		.questions {
+
+			clear: left;
+			display: inline-block;
+		}
+
+		#Q1, #Q2, #Q3, #Q4 {
+
+			border-style: inset;
+			width: 700px;
+			margin: 20px;
+			padding: 30px;
+			background-color: white;
+			margin-right: auto;
+			margin-left: auto;
+			clear: left;
+
+		}
+
+		#Q1 > input {
+
+			margin-left: 35px;
+			float: left;
+		}
+		
+		#Q2 > input {
+
+			margin-left: 35px;
+			float: left;
+		}
+
+		#Q3 > input {
+
+			margin-left: 35px;
+			float: left;
+		}
+
+		#Q4 > input {
+
+			margin-left: 35px;
+			float: left;
+		}
+
+		.submit {
+
+			float: left;
+			display: inline-block;
+		}
+		
+		footer {
+
+			background-color: #3f4d63;
+			color: white;
+			font-size: 8pt;
+			font-weight: normal; 
+			font-family: “Helvetica Neue”, Verdana, sans-serif;
+			padding: 8px 8px 8px 20px;
+			margin-top: 20px;
+			
+		}
+
+		footer a {
+
+			color: white;
+			font-size: 8pt;
+			font-weight: italic;
+
+		}
+
+		@media (max-width: 782px) {
+
+			#topnav {
+
+				height: 46px;
+				display: block;
+				padding: 5px;
+			}
+
+			h1 {
+
+				font-size: 12pt;
+				float: none;
+				margin: 14px 0px 0px 12px;
+			}
+
+			#options {
+
+				display: none;
+			}
+
+			#socmedia {
+
+				display: none;
+			}
+
+			.mobmenu {
+
+				display: inline-block;
+
+			}
+
+			.dropdown-content a {
+
+				font-size: 12px
+			}
+		}

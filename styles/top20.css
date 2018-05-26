@@ -1,0 +1,504 @@
+body {
+
+			margin: 0;
+		}
+
+		#topnav {
+
+			padding: 18px;
+			background-color: white;
+			box-shadow: 1px 2px 4px rgba(0, 0, 81, .5);
+			display: block;
+			position: sticky;
+		}
+
+		a {
+
+			text-decoration: none;
+			font-size: 18pt;
+			font-family:“Helvetica Neue”, Vardana, sans-serif;
+			color: black;
+		}
+
+		a:hover {
+
+			color: red;
+		}
+
+
+		#topnav a {
+
+			margin-right: 22px;
+		}
+
+		h1 {
+
+			font-size: 18pt;
+			float: left;
+			font-weight: normal;
+			margin: 0px 50px 0px 0px;
+			font-family:“Helvetica Neue”, Vardana, sans-serif;
+		}
+
+		/* Dropdown button */
+
+		#dropbtn {
+
+			background-color: white;
+			color: black;
+			padding: 16px;
+			font-size: 16px;
+			border: none;
+			cursor: pointer;
+		}
+
+		/* The container <div> - needed to position the dropdown content */
+
+		.mobmenu {
+
+			float: left;
+			position: relative;
+			display: none;
+		}
+
+		/*Dropdown content (Hidden by default)*/
+
+		.dropdown-content {
+
+			display: none;
+			position: absolute;
+			background-color: #f1f1f1;
+			min-width: 160px;
+			box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+			z-index: 1;
+		}
+
+		/*links inside the dropdwon */
+
+		.dropdown-content a {
+
+			color: black;
+			padding: 12px 16px;
+			text-decoration: none;
+			display: block;
+		}
+
+		/*Change color of dropdown link on hover */
+
+		.dropdown-content a:hover { background-color: #ddd }
+
+		/*show the drop down menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+
+		.show {display: block;}
+
+		#socmedia {
+
+			float: right;
+			font-size: 16pt;
+			margin-right: 12px;
+
+		}
+
+		article {
+
+			width: 960px;
+			margin-left: auto;
+			margin-right: auto;
+			height: 100%;
+		}
+
+		.parallax {
+
+			/*The Image used */
+			background-image: url("../Images/swirl.jpg");
+
+			/*Set Height */
+			min-height: 120px;
+
+			/*The parallax scrolling effect */
+			background-attachment: fixed;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+
+		.parallax20 {
+
+			background-image: url("../Images/Kendrick_Lamar.jpg");
+			min-height: 900px;
+			background-attachment: fixed;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: 1080px;
+		}
+
+		.parallax19 {
+		
+			background-image: url("../Images/Brian_Eno.jpg");
+			min-height: 900px;
+			background-attachment: fixed;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: 1080px;
+		}
+
+		.parallax18 {
+	
+			background-image: url("../Images/Ghostpoet.jpg");
+			min-height: 900px;
+			background-attachment: fixed;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: 1080px;
+		}
+
+		.parallax17 {
+
+			background-image: url("../Images/Kelela.jpg");			
+			min-height: 900px;			
+			background-attachment: fixed;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: 1080px;
+		}
+
+		.parallax16 {
+			
+			background-image: url("../Images/Father_John_Misty.jpg");			
+			min-height: 900px;			
+			background-attachment: fixed;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: 1080px;
+		}
+
+		.parallax15 {
+			
+			background-image: url("../Images/QOTSA.png");
+			min-height: 900px;			
+			background-attachment: fixed;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: 1080px;
+		}
+
+		.parallax14 {
+
+			
+			background-image: url("../Images/Four_Tet.jpg");			
+			min-height: 900px;			
+			background-attachment: fixed;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: 1080px;
+		}
+
+		.parallax13 {
+			
+			background-image: url("../Images/Photay.jpg");			
+			min-height: 900px;			
+			background-attachment: fixed;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: 1080px;
+		}
+
+		.parallax12 {
+
+			
+			background-image: url("../Images/Jesca_Hoop.jpg");			
+			min-height: 900px;			
+			background-attachment: fixed;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: 1080px;
+		}
+
+		.parallax11 {
+			
+			background-image: url("../Images/LCD_Soundsystem.jpg");			
+			min-height: 900px;		
+			background-attachment: fixed;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: 1080px;
+		}
+
+		.parallax10 {
+
+			
+			background-image: url("../Images/Iglooghost.jpg");			
+			min-height: 900px;			
+			background-attachment: fixed;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: 1080px;
+		}
+
+		.parallax9 {
+			
+			background-image: url("../Images/Feist.jpg");			
+			min-height: 900px;			
+			background-attachment: fixed;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: 1080px;
+		}
+
+		.parallax8 {
+
+			
+			background-image: url("../Images/DFA1979.jpg");			
+			min-height: 900px;			
+			background-attachment: fixed;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: 1080px;
+		}
+
+		.parallax7 {
+
+			
+			background-image: url("../Images/Luarel_Halo.jpg");			
+			min-height: 900px;		
+			background-attachment: fixed;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: 1080px;
+		}
+
+		.parallax6 {
+
+			
+			background-image: url("../Images/Max_Richter.jpeg");			
+			min-height: 900px;			
+			background-attachment: fixed;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: 1080px;
+		}
+
+		.parallax5 {
+
+			
+			background-image: url("../Images/dirty_Projectors.jpg");			
+			min-height: 900px;			
+			background-attachment: fixed;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: 1080px;
+		}
+
+		.parallax4 {
+
+			
+			background-image: url("../Images/Kelly_Lee_Owens.jpg");			
+			min-height: 900px;			
+			background-attachment: fixed;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: 1080px;
+		}
+
+		.parallax3 {
+
+			
+			background-image: url("../Images/Arca.jpg");			
+			min-height: 900px;			
+			background-attachment: fixed;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: 1080px;
+		}
+
+		.parallax2 {
+
+			
+			background-image: url("../Images/Fever_Ray.jpg");			
+			min-height: 900px;		
+			background-attachment: fixed;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: 1080px;
+		}
+
+		.parallax1 {
+
+			
+			background-image: url("../Images/Lorde.png");			
+			min-height: 900px;			
+			background-attachment: fixed;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: 1060px;
+		}
+
+		h2 {
+
+			margin: auto;
+			text-align: center;
+			color: black;
+			font-size: 50pt;
+			padding: 5px;
+			font-family:“Helvetica Neue”, Vardana, sans-serif;
+		}
+
+		div.record {
+
+  	  	
+  	  		padding: 20px;
+   			background-color: rgba(255,255,255,0.5);
+   			color: black;
+		}
+
+		div.record h3 {
+
+   			margin: 5%;
+  			font-weight: bold;
+  			font-size: 22pt;
+  			font-family:“Helvetica Neue”, Vardana, sans-serif;
+    	}
+
+    	.position {
+
+    		font-size: 44pt;
+    		vertical-align: top;
+    	}
+
+    	p {
+
+    		background-color: #223160;
+    		color: white;
+    		margin: 0;
+    		padding: 30px;
+    		font-size: 16pt;
+    		font-family:“Helvetica Neue”, Vardana, sans-serif;
+    	}
+
+    	footer {
+
+			background-color: #3f4d63;	
+			margin-top: 30px;		
+		}
+
+		footer p {
+
+			font-size: 8pt;
+			font-weight: normal; 
+			color: white;
+			background-color: #3f4d63;
+			font-family: “Helvetica Neue”, Verdana, sans-serif;
+			padding: 8px 8px 8px 20px;
+
+		}
+ 
+		footer a {
+
+			color: white;
+			font-size: 8pt;
+			font-weight: italic;
+
+		}
+
+		#socmediafooter {
+
+			padding: 8px 8px 8px 20px;
+			font-size: 8pt;
+		}
+
+    	@media (max-width: 782px) {
+
+    		article {
+
+    			width: 100%;
+    		}
+
+			#topnav {
+
+				height: 46px;
+				display: block;
+				padding: 5px;
+			}
+
+			h1 {
+
+				font-size: 12pt;
+				float: none;
+				margin: 14px 0px 0px 12px;
+			}
+
+			#options {
+
+				display: none;
+			}
+
+			#socmedia {
+
+				display: none;
+			}
+
+			.mobmenu {
+
+				display: inline-block;
+
+			}
+
+			.dropdown-content a {
+
+				font-size: 12px
+			}		
+
+    		.parallax, {
+
+    			background-attachment: scroll;
+    			min-height: 120px;
+    		}
+
+    		.parallax20, .parallax19, .parallax18, .parallax17, .parallax16, .parallax15, .parallax14, .parallax13, .parallax12, .parallax11, .parallax10, .parallax9, .parallax8, .parallax7, .parallax6, .parallax5, .parallax4, .parallax3, .parallax2, .parallax1  {
+
+        	background-attachment: scroll;
+        	min-height: 600px;
+
+
+    		}  
+
+    		h2 {font-size: 25pt;}
+
+    		p {font-size: 12pt;}
+
+    		.position {font-size: 22pt;}
+
+    		div .record h3 {font-size: 22pt;}
+		}
+
+		@media (max-width: 360px) {
+
+			.parallax, {
+
+    			background-attachment: scroll;
+    			min-height: 120px;
+    		}
+
+    		.parallax20, .parallax19, .parallax18, .parallax17, .parallax16, .parallax15, .parallax14, .parallax13, .parallax12, .parallax11, .parallax10, .parallax9, .parallax8, .parallax7, .parallax6, .parallax5, .parallax4, .parallax3, .parallax2, .parallax1  {
+
+        	background-attachment: scroll;
+        	min-height: 300px;
+
+			} 
+
+			h2{font-size: 12pt;}
+
+			p {
+
+				font-size: 8pt;
+				padding: 15px;
+			}
+
+			.position {font-size: 12pt;}
+
+			div .record h3 {
+
+				font-size: 12pt;
+				padding: 2px;
+			}
+		}
