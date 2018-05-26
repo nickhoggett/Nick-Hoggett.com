@@ -1,391 +1,87 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Nick Hoggett 2018</title>
-	<!-- W3  social media icons link -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<style type="text/css">
+<!doctype html>
+<html lang="en">
+  <head>
 
-		body {
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-			margin: 0;
-		}
-		
-		#topnav {
+    <link rel="stylesheet" href="styles\title.css">
 
-			padding: 18px;
-			background-color: white;
-			box-shadow: 1px 2px 4px rgba(0, 0, 81, .5);
-			display: block;
-		}
-
-		a {
-
-			text-decoration: none;
-			font-size: 18pt;
-			font-family:“Helvetica Neue”, Vardana, sans-serif;
-			color: black;
-		}
-
-		a:hover {
-
-			color: red;
-		}
-
-		#topnav a {
-
-			margin-right: 22px;
-		}
-
-		h1 {
-
-			font-size: 18pt;
-			float: left;
-			font-weight: normal;
-			margin: 0px 50px 0px 0px;
-			font-family:“Helvetica Neue”, Vardana, sans-serif;
-		}
-
-		/* Dropdown button */
-
-		#dropbtn {
-
-			background-color: white;
-			color: black;
-			padding: 16px;
-			font-size: 16px;
-			border: none;
-			cursor: pointer;
-		}
-
-		/* The container <div> - needed to position the dropdown content */
-
-		.mobmenu {
-
-			float: left;
-			position: relative;
-			display: none;
-		}
-
-		/*Dropdown content (Hidden by default)*/
-
-		.dropdown-content {
-
-			display: none;
-			position: absolute;
-			background-color: #f1f1f1;
-			min-width: 160px;
-			box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-			z-index: 1;
-		}
-
-		/*links inside the dropdwon */
-
-		.dropdown-content a {
-
-			color: black;
-			padding: 12px 16px;
-			text-decoration: none;
-			display: block;
-		}
-
-		/*Change color of dropdown link on hover */
-
-		.dropdown-content a:hover { background-color: #ddd }
-
-		/*show the drop down menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-
-		.show {display: block;}
-
-		h2 {
-
-			font-size: 19pt;
-			font-weight: normal; 
-			font-family: “Helvetica Neue”, Verdana, sans-serif;
-			margin-left: 10px;
-
-		}
-
-		#socmedia {
-
-			float: right;
-			font-size: 16pt;
-			margin-right: 12px;
-
-		}
-
-		img { 
-
-			border-radius: 15px;
-			max-width: 100%;
-		}
-
-		.row {
-
-			display: flex;
-			flex-wrap: wrap;
-			padding: 0 4px;
-
-		}
-
-		.column {
-
-			flex: 24%;
-			max-width: 24%;
-			padding: 0 4px;
-
-		}
-
-		.column img {
-
-			margin-top: 8px;
-			vertical-align: middle;
-
-		}
-
-		/*container holding the image and text*/
-
-		.container {
-
-			position: relative;
-			text-align: center;
-			color: white;
-
-		}
-
-		/*top left text position*/
-
-		.top-left {
-
-			position: absolute;
-			top: 8px;
-			left: 16px;
-			padding: 14px 0px 0px 18px;
-			font-family: “Helvetica Neue”, Verdana, sans-serif;
-			font-size: 12pt;
-		}
-
-		footer {
-
-			background-color: #3f4d63;
-			color: white;
-			font-size: 8pt;
-			font-weight: normal; 
-			font-family: “Helvetica Neue”, Verdana, sans-serif;
-			padding: 8px 8px 8px 20px;
-			margin-top: 20px;
-			
-		}
-
-		footer a {
-
-			color: white;
-			font-size: 8pt;
-			font-weight: italic;
-
-		}
-
-		@media (max-width: 1353px) {
-
-			footer {
-
-				position: fixed;
-				width: 100%;
-				bottom: 0;
-			}
-		}
-
-		@media (max-width: 884px) {
-
-			.column {
-
-				flex: 45%;
-				max-width: 45%;
-			}
-
-			.progress {
-
-				display: none;
-
-			}
-
-			footer { 
-
-				position: relative; 
-			}
-		}
-
-		@media (max-width: 782px) {
-
-			#topnav {
-
-				height: 46px;
-				display: block;
-				padding: 5px;
-			}
-
-			h1 {
-
-				font-size: 12pt;
-				float: none;
-				margin: 14px 0px 0px 12px;
-			}
-
-			#options {
-
-				display: none;
-			}
-
-			#socmedia {
-
-				display: none;
-			}
-
-			.mobmenu {
-
-				display: inline-block;
-
-			}
-
-			.dropdown-content a {
-
-				font-size: 12px
-			}
-			
-			h2 {
-
-				font-size: 12pt;
-			}
-
-			footer {
-
-				position: fixed;
-			}
-		}
-
-		@media (max-width: 600px) {
-
-			.column {
-
-				flex: 100%;
-				max-width: 100%
-			}
-
-			.progress, .progress1 {
-
-				display: none;
-			}
-
-			footer {
-
-				position: relative;
-			}
-		}
-
-	</style>
-</head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <body>
-	<div id="topnav">
-		<div class="mobmenu">
-			<button onclick="mobMenu()" id="dropbtn" class="fa fa-bars"></button>
-			<div id="mobDropdown" class="dropdown-content">
-				<a href="#">Projects</a>
-				<a href="#">Request CV</a>
-				<a href="#">About</a>
-			</div>
-		</div>
-			<h1>Nick Hoggett</h1>
-		<span id="options">
-			<a href="#">Projects</a>
-			<a href="mailto:nick.hoggett@gmail.com?Subject=Please%20send%20your%20CV">Request CV</a>
-			<a href="#">About</a>
-		</span>
-		<div id="socmedia">
-			<a href="https://uk.linkedin.com/in/nick-hoggett-861a929b" class="fa fa-linkedin-square"></a>
-			<a href="https://www.instagram.com/nickhoggett/" class="fa fa-instagram"></a>
-			<a href="https://www.facebook.com/nick.hoggett" class="fa fa-facebook-square"></a>
-			<a href="https://twitter.com/nickhoggett" class="fa fa-twitter-square"></a>
-		</div>	
-	</div>
-	<article>
-		<h2>Projects</h2>
-		<div class="row">
-			<div class="column">
-				<div class="container">
-					<img src="moon.jpg">
-					<div class="top-left">Craig Hull Photography</div>
-				</div>
-				<div class="container">
-					<img class="progress" src="progress.jpg">
-					<div class="top-left"></div>
-				</div>
-			</div>
-			<div class="column">
-				<div class="container">
-					<img src="moon.jpg">
-					<div class="top-left">UWL Questionnaire</div>
-				</div>
-				<div class="container">
-					<img class="progress" src="progress.jpg">
-					<div class="top-left"></div>
-				</div>
-			</div>
-			<div class="column">
-				<div class="container">
-					<a href="top20.html"><img src="Images/Top20.jpg"></a>
-					<div class="top-left">My Top 20 Albums 2017</div>
-				</div>
-				<div class="container">
-					<img class="progress" src="progress.jpg">
-					<div class="top-left"></div>
-				</div>
-			</div>
-			<div class="column">
-				<div class="container">
-					<img class="progress1" src="progress.jpg">
-					<div class="top-left"></div>
-				</div>
-				<div class="container">
-					<img class="progress" src="progress.jpg">
-					<div class="top-left"></div>
-				</div>
-			</div>
-		</div>
-	<script type="text/javascript">
-		//alert(document.body.clientWidth);
-
-		/*when user clicks on the button, toggle between hidding and showing the dropdown content */
-
-		function mobMenu() {
-			document.getElementById("mobDropdown").classList.toggle("show");
-		}
-
-		//Close the dropdown if the user clicks outisde of it. 
-		window.onclick = function(event) {
-			if (!event.target.matches(".dropbtn")) {
-
-				var dropdowns = document.getElementByClassName("dropdown-content");
-				var i;
-				for (i = 0; i < dropdowns.length; i++) {
-					var openDropdown = dropdowns[i];
-					if (openDropdown.classList.contains("show"));{
-						openDropdown.classList.remove("show");
-					}
-				}
-			}
-		}
-	</script>
-	</article>
-	<footer>
-		<p>Contact Details: </p>
-		<p>Email me: <a href="mailto:nick.hoggett@gmail.com?Subject=Hello%20Nick">nick.hoggett@gmail.com</a></p>
-		<p>Social Media:</p>
-		<div id="socmediafooter">
-			<a href="https://uk.linkedin.com/in/nick-hoggett-861a929b" class="fa fa-linkedin-square"></a>
-			<a href="https://www.instagram.com/nickhoggett/" class="fa fa-instagram"></a>
-			<a href="https://www.facebook.com/nick.hoggett" class="fa fa-facebook-square"></a>
-			<a href="https://twitter.com/nickhoggett" class="fa fa-twitter-square"></a>
-		</div>
-	</footer>
-</body>
-</html>
+  <div id="topnav">
+    <div class="mobmenu">
+      <button onclick="mobMenu()" id="dropbtn" class="fa fa-bars"></button>
+      <div id="mobDropdown" class="dropdown-content">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+      <h1>Nick Hoggett</h1>
+    <span id="options"><a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </span>
+    <div id="socmedia">
+      <a class="fa fa-github" href="https://github.com/nickhoggett"></a>
+      <a class="fa fa-codepen" href="https://codepen.io/nickhoggett/"></a>
+      <a class="fa fa-free-code-camp" href="https://www.freecodecamp.org/nickhoggett"</a>
+      <a class="fa fa-instagram" href="https://www.instagram.com/nickhoggett/"></a>
+      <a class="fa fa-twitter" href="https://twitter.com/nickhoggett"></a>
+    </div>  
+  </div>
+    <img id="profile" alt="fbprofile"src="Images\profile.jpg">
+<div class="about" id="about">
+  <h2>About</h2>
+  <p>I'm a self taught web developer and currently looking to get a foot in the door of the industry and start my first full-time job in front-end web development.</p> 
+  <p> For over the past few years I've been teaching myself how to code, design and develop UI/UX. 
+  <p>With the knowledge I've gained, I'm in a position where I would like to take my work into a professional environment working closer with others to further my self tuaght skills and make use of them on daily basis.</p>
+  <br>
+  <p>Please take a look at the some of the <a href="#projects">projects</a> I've either taken on or set for myself which should demostrate my current skillsets which include: 
+    <ul>
+      <li>HTML5</li>
+      <li>CSS3</li>
+      <li>Javascript</li>
+      <li>JQuery</li>
+      <li>Bootstrap</li>
+    </ul>
+  <p>Please <a href="#contact">Contact Me</a> for a CV or any further details</p>
+</div>
+<div class="projects" id="projects">
+    <h2>Projects</h2>
+    <div class="prj">
+      <a href="#"><img src="Images\Hull.jpg" alt="Craig Hull Photography"></a>
+        <button>View Code</button>
+    </div>
+    <div class="prj">
+       <a href="#"><img src="Images\ULW.jpg" alt="UWL H&amp;S Test"></a>
+        <button>View Code</button>
+    </div>
+    <div class="prj">
+      <a href="#"><img src="Images\top202.jpg" alt="Top 20 Albums"></a>    
+      <button><a href="https://github.com/nickhoggett/Top-20-Records-2017-">View Code</a></button>
+    </div>
+    <div class="prj">
+      <a href="https://codepen.io/nickhoggett/full/qYKEJq/"><img src="Images\DBTribute.jpg" alt="DB Tribute"></a>
+      <button><a href="https://codepen.io/nickhoggett/pen/qYKEJq" target="_blank">View Code</a></button>
+    </div>
+  </div>
+  <div class="contact" id="contact">
+    <h2>Contact Me:</h2>
+    <p>Fill in the form:</p>
+    <input type:"text" name="Full Name" value="Full Name" disabled></input>
+    <input type:"text" name="email address" value="Email" disabled></input>
+    <input id="message" type:"Message" name="Message" value="Message" disabled></input>
+    <button id="send" disabled>Send.</button>  
+    <p>or</p>
+    <p>email me <a href="#"> nick.hoggett@gmail.com</a>
+  </div>
+  <footer>
+    <p>All written and coded by: Nick Hoggett</p>
+     <a class="fa fa-github" href="https://github.com/nickhoggett"></a>
+      <a class="fa fa-codepen" href="https://codepen.io/nickhoggett/"></a>
+      <a class="fa fa-free-code-camp" href="https://www.freecodecamp.org/nickhoggett"</a>
+      <a class="fa fa-instagram" href="https://www.instagram.com/nickhoggett/"></a>
+      <a class="fa fa-twitter" href="https://twitter.com/nickhoggett"></a>
+  </footer>
+  </body>
