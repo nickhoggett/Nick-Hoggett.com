@@ -1,0 +1,162 @@
+body {
+  
+  background-color: #d8c75b;
+  background: linear-gradient(to bottom right, #efe0ac, #566d58);
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+
+}
+
+#topnav {
+
+      padding: 18px;
+      background-color: #473c54;
+      box-shadow: 1px 2px 4px rgba(0, 0, 81, .5);
+      display: block;
+      font-size: 18pt;
+      color: #d8c75b;
+      height: 50px;
+    }
+
+#topnav a {
+
+      margin-right: 22px;
+      color: #d8c75b;
+    }
+
+h1 {
+
+      font-size: 18pt;
+      float: left;
+      font-weight: normal;
+      margin: 0px 50px 0px 0px;
+  
+    }
+
+h1:hover { 
+  
+    color: #e3cdf7; }
+
+#options a:hover {
+
+    color: #e3cdf7;
+}
+
+#socmedia a:hover {
+
+  color: #e3cdf7;
+}
+
+
+#topnav button:hover {
+
+  color: #e3cdf7;
+}
+
+#mobDropdown a:hover {
+
+  color: #e3cdf7;
+
+}
+
+/* Dropdown button */
+
+    #dropbtn {
+
+      background-color: #473c54;
+      color: #d8c75b;
+      padding: 16px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+      width: 100px;
+    }
+
+    /* The container <div> - needed to position the dropdown content */
+
+    .mobmenu {
+
+      float: right;
+      position: relative;
+      display: none;
+    }
+
+    /*Dropdown content (Hidden by default)*/
+
+    .dropdown-content {
+
+      display: none;
+      position: absolute;
+      background-color: #473c54;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+    /*links inside the dropdwon */
+
+    .dropdown-content a {
+
+      color: black;
+      padding: 20px 20px 20px 0px;
+      text-decoration: none;
+      display: block;
+      margin-right: 20px;
+      text-align: center;
+    }
+
+    /*show the drop down menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+
+    .show {display: block;}
+
+    #socmedia {
+
+      float: right;
+      font-size: 14pt;
+      
+
+    }
+
+    a {
+  
+  	text-decoration: none;
+  
+	}
+
+@media  (max-width: 770px) {
+
+      #topnav {
+
+        height: 60px;
+        display: block;
+        padding: 5px;
+      }
+
+      h1 {
+
+        font-size: 16pt;
+        float: none;
+        margin: 14px 0px 0px 12px;
+      }
+
+      #options {
+
+        display: none;
+      }
+
+      #socmedia {
+
+        display: none;
+      }
+
+      .mobmenu {
+
+        display: inline-block;
+
+      }
+
+      .dropdown-content a {
+
+        font-size: 12px
+      }
+
