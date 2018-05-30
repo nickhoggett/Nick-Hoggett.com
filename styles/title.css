@@ -173,7 +173,7 @@ a {
   
 }
 
-.prj > button {
+.lnkcontainer {
   
   display: block;
   width: 90%;
@@ -187,10 +187,14 @@ a {
   background-color: #d8c75b;
   border-width: 2px;
   border-color: #473c54;
+  border: solid 2px;
   border-radius: 15px 15px 15px 15px;
+  text-align: center;
+  padding-top: 11px;
+
 }
 
-.prj > button:hover {
+.lnkcontainer:hover {
 
   background-color: #e3cdf7;
 }
@@ -356,10 +360,11 @@ footer a {
 
   }
 
-  .prj > button {
+  .lnkcontainer {
 
     font-size: 14pt;
     margin-left: 10px;
+    height: 27px;
   }
 
   footer p { 
