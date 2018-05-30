@@ -194,6 +194,11 @@ a {
 
 }
 
+.lnkcontainer a {
+
+  color: #473c54;
+}
+
 .lnkcontainer:hover {
 
   background-color: #e3cdf7;
